@@ -8,6 +8,7 @@ A simulated IoT Weather Station using ESP32, DHT22 sensor, and ThingSpeak cloud 
 - DHT22 Temperature & Humidity Sensor
 - ThingSpeak IoT Cloud Platform
 - Wokwi Online Simulator
+- Python (for data simulation)
 
 ## Circuit Connections
 | DHT22 Pin | ESP32 Pin |
@@ -22,23 +23,25 @@ A simulated IoT Weather Station using ESP32, DHT22 sensor, and ThingSpeak cloud 
 - Real-time humidity monitoring
 - Data visualization on ThingSpeak dashboard
 - WiFi connectivity using ESP32
-- Simulated using Wokwi online simulator
+- Simulated using Wokwi online simulator and Python script
 
 ## How It Works
 1. ESP32 reads temperature and humidity from DHT22 sensor every 20 seconds
 2. Data is sent to ThingSpeak cloud via HTTP GET request
 3. ThingSpeak displays live graphs for both temperature and humidity
+4. A Python script (simulate.py) was used to test the ThingSpeak integration by sending simulated sensor readings
 
 ## ThingSpeak Dashboard
 - Field 1: Temperature (°C)
 - Field 2: Humidity (%)
 - Channel ID: 3405702
 
-## Wokwi Simulation
-[Click here to view simulation] https://wokwi.com/projects/466538501281005569
+## Files
+- `weather_station.ino` - ESP32 firmware code (Arduino)
+- `simulate.py` - Python script to simulate sensor data and test ThingSpeak API
 
 ## Output
-See screenshots folder for simulation and ThingSpeak graph outputs.
+See uploaded screenshots for CMD output and ThingSpeak graph results.
 
 ## Technologies Used
 - Arduino C++ (ESP32 firmware)
